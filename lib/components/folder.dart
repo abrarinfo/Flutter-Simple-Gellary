@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gellary/components/file_one.dart';
+import 'package:flutter_gellary/components/all_photos.dart';
+import 'package:flutter_gellary/components/bluetooth.dart';
+import 'package:flutter_gellary/components/favorite.dart';
+import 'package:flutter_gellary/components/camera.dart';
 import 'package:get/get.dart';
 
 class Folder extends StatelessWidget {
@@ -31,6 +34,13 @@ class Folder extends StatelessWidget {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwclY3q-sh2CLuA47kocKqEBdOYikeqP1iEA&usqp=CAU',
   ];
 
+  List<Widget> routePaths = [
+    AllPhotos(),
+    Camera(),
+    Favorite(),
+    Bluetooht(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -38,46 +48,55 @@ class Folder extends StatelessWidget {
         child: Container(
           width: double.infinity,
           margin: EdgeInsets.all(50),
-          child: Wrap(
-            spacing: 40,
-            runSpacing: 40,
+          child: Column(
             children: [
-              for (var i = 0; i < folderName.length; i++)
-                InkWell(
-                  child: Container(
-                    width: 250,
-                    height: 250,
-                    child: Center(
-                      child: Text(
-                        folderName[i],
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          shadows: <Shadow>[
-                            Shadow(
-                              offset: Offset(1.0, 1.0),
-                              blurRadius: 10.0,
-                              color: Colors.black,
+              Wrap(
+                spacing: 40,
+                runSpacing: 40,
+                children: [
+                  for (var i = 0; i < folderName.length; i++)
+                    Column(
+                      children: [
+                        InkWell(
+                          child: Container(
+                            width: 250,
+                            height: 250,
+                            // child: Center(
+                            //   child:
+                            // ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  coverImageLinks[i],
+                                ),
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ],
+                          ),
+                          onTap: () => Get.to(
+                            routePaths[i],
+                          ),
                         ),
-                      ),
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          coverImageLinks[i],
+                        Text(
+                          folderName[i],
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            // shadows: [
+                            //   Shadow(
+                            //     offset: Offset(1.0, 1.0),
+                            //     blurRadius: 10.0,
+                            //     color: Colors.black,
+                            //   ),
+                            // ],
+                          ),
                         ),
-                        fit: BoxFit.cover,
-                      ),
+                      ],
                     ),
-                  ),
-                  onTap: () => Get.to(
-                    FileOne(),
-                  ),
-                ),
+                ],
+              ),
             ],
           ),
         ),
