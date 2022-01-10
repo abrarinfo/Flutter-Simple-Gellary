@@ -1,7 +1,7 @@
 # flutter_gellary
 <br>
-![Untitled](https://user-images.githubusercontent.com/76746914/148725754-e1d1ead3-2628-4e9d-95bc-8be74f9009c3.png)
+![Untitled](https://user-images.githubusercontent.com/76746914/148725806-45193182-7158-4c4c-a811-5c8c66227217.png)
 <br>
-![1Untitled](https://user-images.githubusercontent.com/76746914/148725639-0f5d929e-3b89-4601-8cc4-d83e3cb6a9ce.png)
+![1Untitled](https://user-images.githubusercontent.com/76746914/148725797-de633c59-ef79-4c1d-8705-9734e377d734.png)
 <br>
-![Untitle54d](https://user-images.githubusercontent.com/76746914/148725541-997b9221-f91a-4b15-ae8e-5953aced76f1.png)
+![Untitle54d](https://user-images.githubusercontent.com/76746914/148725793-6eea083e-da64-4d62-a6e8-a4702c623b36.png)
