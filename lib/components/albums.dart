@@ -15,8 +15,8 @@ class Folder extends StatelessWidget {
     'Bluetooth',
     'Downloads',
     'Shared',
-    'SnapChat',
     'ScreenShots',
+    'SnapChat',
     'Facebook',
     'WhatsApp',
   ];
@@ -35,10 +35,46 @@ class Folder extends StatelessWidget {
   ];
 
   List<Widget> routePaths = [
-    AllPhotos(),
-    Camera(),
-    Favorite(),
-    Bluetooht(),
+    AllPhotos(
+      appBarTitle: "All Photos",
+      appBarColor: Colors.pinkAccent,
+    ),
+    Camera(
+      appBarTitle: "Camera",
+      appBarColor: Colors.purpleAccent,
+    ),
+    Favorite(
+      appBarTitle: "Favorite",
+      appBarColor: Colors.teal,
+    ),
+    Bluetooht(
+      appBarTitle: "Bluetooth",
+      appBarColor: Colors.redAccent,
+    ),
+    Camera(
+      appBarTitle: "Downloads",
+      appBarColor: Colors.orangeAccent,
+    ),
+    Favorite(
+      appBarTitle: "Shared",
+      appBarColor: Colors.green,
+    ),
+    Camera(
+      appBarTitle: "ScreenShots",
+      appBarColor: Colors.indigo,
+    ),
+    Favorite(
+      appBarTitle: "SnapChat",
+      appBarColor: Colors.lime,
+    ),
+    Bluetooht(
+      appBarTitle: "Facebook",
+      appBarColor: Colors.pink.shade300,
+    ),
+    Camera(
+      appBarTitle: "WhatsApp",
+      appBarColor: Colors.blue.shade300,
+    ),
   ];
 
   @override
@@ -61,9 +97,6 @@ class Folder extends StatelessWidget {
                           child: Container(
                             width: 250,
                             height: 250,
-                            // child: Center(
-                            //   child:
-                            // ),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
@@ -84,13 +117,6 @@ class Folder extends StatelessWidget {
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
-                            // shadows: [
-                            //   Shadow(
-                            //     offset: Offset(1.0, 1.0),
-                            //     blurRadius: 10.0,
-                            //     color: Colors.black,
-                            //   ),
-                            // ],
                           ),
                         ),
                       ],

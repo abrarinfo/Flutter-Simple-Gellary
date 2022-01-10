@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gellary/components/folder.dart';
+import 'package:flutter_gellary/components/albums.dart';
 
 class Gellary extends StatelessWidget {
   const Gellary({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class Gellary extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Gellary',
+          'Albums',
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
