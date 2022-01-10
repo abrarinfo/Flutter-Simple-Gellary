@@ -79,52 +79,53 @@ class Folder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SingleChildScrollView(
-        child: Container(
-          width: double.infinity,
-          margin: EdgeInsets.all(50),
-          child: Column(
-            children: [
-              Wrap(
-                spacing: 40,
-                runSpacing: 40,
-                children: [
-                  for (var i = 0; i < folderName.length; i++)
-                    Column(
-                      children: [
-                        InkWell(
-                          child: Container(
-                            width: 250,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  coverImageLinks[i],
-                                ),
-                                fit: BoxFit.cover,
+    return SingleChildScrollView(
+      child: Container(
+        width: double.infinity,
+        margin: EdgeInsets.all(50),
+        child: Column(
+          children: [
+            Wrap(
+              spacing: 40,
+              runSpacing: 40,
+              children: [
+                for (var i = 0; i < folderName.length; i++)
+                  Column(
+                    children: [
+                      InkWell(
+                        child: Container(
+                          width: 250,
+                          height: 250,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                coverImageLinks[i],
                               ),
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          onTap: () => Get.to(
-                            routePaths[i],
-                          ),
                         ),
-                        Text(
-                          folderName[i],
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
+                        onTap: () => Get.to(
+                          routePaths[i],
                         ),
-                      ],
-                    ),
-                ],
-              ),
-            ],
-          ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        folderName[i],
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+              ],
+            ),
+          ],
         ),
       ),
     );
